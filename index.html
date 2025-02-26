@@ -13,8 +13,8 @@
         }
     </style>
 </head>
-<body>
-    <h1>Click the button to reveal something awesome!</h1>
+<body><center>
+    <h1><Click the button to reveal something awesome!</h1>
     <button onclick="showVideo()">Click me!</button>
 
     <div id="video">
@@ -26,8 +26,10 @@
 
     <script>
         function showVideo() {
+            var videoElement = document.querySelector('video');
             document.getElementById('video').style.display = 'block';
+            videoElement.play(); // This ensures autoplay when the video is revealed
         }
     </script>
-</body>
+</center></body>
 </html>
