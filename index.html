@@ -5,31 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rickroll</title>
     <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
         #video {
-            display: none;
-            width: 100%;
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        video {
             max-width: 600px;
-            margin-top: 20px;
+            width: 100%;
+            height: auto;
         }
     </style>
 </head>
-<body><center>
-    <h1><Click the button to reveal something awesome!</h1>
-    <button onclick="showVideo()">Click me!</button>
-
+<body>
     <div id="video">
-        <video width="1120" height="630" controls autoplay>
+        <video controls autoplay>
             <source src="youtube_EGNkpqPlle8_622x480_h264.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
-
-    <script>
-        function showVideo() {
-            var videoElement = document.querySelector('video');
-            document.getElementById('video').style.display = 'block';
-            videoElement.play(); // This ensures autoplay when the video is revealed
-        }
-    </script>
-</center></body>
+</body>
 </html>
